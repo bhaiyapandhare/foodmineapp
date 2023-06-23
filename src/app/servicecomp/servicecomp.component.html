@@ -1,0 +1,96 @@
+<p>servicecomp works!</p>
+
+<!-- <table border="3px" >
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Zipcode</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.address.zipcode}}</td>
+        </tr>
+    </tbody> -->
+<div class="conatiner">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" formControlName="firstName">
+         
+        </div>
+      
+        <div>
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" formControlName="lastName">
+        </div>
+      
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" formControlName="email">
+        </div>
+      
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" formControlName="password">
+        </div>
+      
+        <div>
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" formControlName="confirmPassword">
+        </div>
+      
+        <button type="submit" [disabled]="myForm.invalid">Submit</button>
+      </form>
+      
+</div>
+<!-- 
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email" required>
+          <div *ngIf="loginForm.submitted && loginForm.controls.email.invalid" class="text-danger">
+            Email is required and must be a valid email address.
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" required>
+          <div *ngIf="loginForm.submitted && loginForm.controls.password.invalid" class="text-danger">
+            Password is required.
+          </div>
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+       -->
+<div class="matcard">
+  <table>
+    <thead>
+      <td> id</td>
+      <td> name</td>
+      <td> comp</td>
+      <td> price</td>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of Products ">
+
+        <td>{{p.id}}</td>
+        <td>
+          {{p.name}}
+        </td>
+        <td> {{p.Comp}}</td>
+        <td>{{p.Price}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
